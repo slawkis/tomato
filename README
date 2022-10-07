@@ -8,7 +8,7 @@ Bugfixes : saveas (e)dsk
 
 TOs MAnipulating TOol
 
-Quick and dirty tool to manipulate DSK/IMG disk images from FDD3/FDD3000
+Quick and dirty tool for manipulating DSK/IMG disk images from FDD3/FDD3000
 Always work on a copy of Your disk image :)
 
 Command line tool.
