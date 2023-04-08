@@ -31,11 +31,18 @@ int command_open::is_dsk(string name){
     file.read(buf,512);
     file.close();
     d_header *dh=reinterpret_cast<d_header*>(buf);
+/*
     id = string(dh->ID,34);
     if( (id != "EXTENDED CPC DSK File\r\nDisk-Info\r\n") &&
         (id != "MV - CPCEMU Disk-File\r\nDisk-Info\r\n")) {
         return 0;
     }
+*/
+    id = string(dh->ID,8);
+    if( (id != "EXTENDED") && (id != "MV - CPC")) {
+        return 0;
+    }
+
     if ((dh->track[0].no_of_sectors != 16)||
             (dh->track[0].filler  != 0xe5)||
             (dh->track[0].sector_size != 1) ) {

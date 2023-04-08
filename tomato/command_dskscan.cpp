@@ -21,9 +21,15 @@ void command_dskscan::exec(list<string> params){
     file.read(buf,256);
     cout << "File name : " << name << endl;
     cout << "Format    : ";
+/*
     if      (string(dh->ID,34) == h_DSK)  { cout << "DSK"  << endl; format = 0; }
         else if (string(dh->ID,34) == h_EDSK) { cout << "EDSK" << endl; format = 1; }
         else { cout << "Unknown." << endl << endl; file.close(); return; }
+*/
+    if      (string(dh->ID,8) == id_DSK)  { cout << "DSK"  << endl; format = 0; }
+        else if (string(dh->ID,8) == id_EDSK) { cout << "EDSK" << endl; format = 1; }
+        else { cout << "Unknown." << endl << endl; file.close(); return; }
+
     creator = string(dh->creator,14);
     cout << "Creator   : " << creator.c_str() << endl;
     cout << "Sides     : " << static_cast<int>(dh->sides) << endl;

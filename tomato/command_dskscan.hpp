@@ -15,6 +15,8 @@ protected:
     const string h_DSK  = "MV - CPCEMU Disk-File\r\nDisk-Info\r\n";
     const string h_EDSK = "EXTENDED CPC DSK File\r\nDisk-Info\r\n";
     const string h_TRACK= "Track-Info\r\n";
+    const string id_DSK  = "MV - CPC";
+    const string id_EDSK = "EXTENDED";
 
     char buf[16384];
 
