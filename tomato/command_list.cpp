@@ -48,7 +48,7 @@ void command_list::list_files(int id, unsigned long lev, int last) {
                     baslen=-1;
                 }
             }
-            cout << setw(0);
+            cout << setw(0) << setfill(' ');
             if (lev!=0) { cout << "│" ; }
             cout << spacer.substr(0,lev);
 //            cout << "└" << setw(14)<< it.name << "\t";
