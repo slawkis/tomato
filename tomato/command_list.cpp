@@ -49,10 +49,10 @@ void command_list::list_files(int id, unsigned long lev, int last) {
                 }
             }
             cout << setw(0) << setfill(' ');
-            if (lev!=0) { cout << "│" ; }
+            if (lev!=0) { cout << u8"│" ; }
             cout << spacer.substr(0,lev);
 //            cout << "└" << setw(14)<< it.name << "\t";
-            stype = "└" + it.name + spacer;
+            stype = u8"└" + it.name + spacer;
             cout << stype.substr(0,15);
 //            cout << stype << "<" <<endl;
             if(!lev){ cout << "  ";}
