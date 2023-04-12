@@ -14,6 +14,8 @@ long command_open::fsize(string name){
 int command_open::is_dsk(string name){
     fstream file;
     string  id;
+    
+/*
     long size = fsize(name); // TODO: zmienić na iterację po wielkościach z tabeli formatów
     if ( (size != 174336) && // tos160
          (size != 348416) && // tos160ds
@@ -22,6 +24,7 @@ int command_open::is_dsk(string name){
          (size != 365824)) { // tos4ds
         return 0;
     }
+*/
     char buf[512];
     file.open(name,ios::in | ios::binary);
     if (!file.is_open()) {
